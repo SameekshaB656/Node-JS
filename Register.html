@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <h2>E-Book</h2>
+    <a href="Register.html">Registration</a>
+    <a href="Login.html">Login</a>
+    <a href="Catalog.html">Catalog</a>
+    <a href="Cart.html">Cart</a>
+    <a href="Logout.html">Logout</a>
+</div>
+
+<!-- Main Content -->
+<div class="main">
+
+   <div class="header">
+        E-Book Management System
+    <div class="welcome-text">Welcome</div>
+    <div class="welcome-name">Sameeksha-24WH1A05C5</div>
+</div>
+
+
+    <div class="container">
+        <div class="form-card">
+
+            <h3>Create Account</h3>
+
+            <!-- Full Name -->
+            <input type="text" id="name" placeholder="Full Name">
+
+            <!-- Email -->
+            <input type="email" id="email" placeholder="Email Address">
+
+            <!-- Password -->
+            <input type="password" id="pass" placeholder="Password">
+
+            <!-- Confirm Password -->
+            <input type="password" id="confirmPass" placeholder="Confirm Password">
+
+            <!-- Gender (Radio Buttons in One Line) -->
+            <div class="gender-group">
+                <label>Gender</label><br>
+
+                <label class="radio-inline">
+                    <input type="radio" name="gender" value="Male"> Male
+                </label>
+
+                <label class="radio-inline">
+                    <input type="radio" name="gender" value="Female"> Female
+                </label>
+
+                <label class="radio-inline">
+                    <input type="radio" name="gender" value="Other"> Other
+                </label>
+            </div>
+
+            <!-- Register Button -->
+            <button class="btn" onclick="register()">Register</button>
+
+        </div>
+    </div>
+
+</div>
+
+<script src="Script.js"></script>
+
+
+</body>
+</html>

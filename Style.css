@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: #0d4d87;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  margin: 5px 0;
+}
+
+.sidebar a:hover {
+  background: #1c6cc4;
+}
+
+/* Main content */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header (single clean version) */
+.header {
+  background: #4CAF50;
+  text-align: center;
+  padding: 15px;
+  color: white;
+}
+
+/* BIG Title */
+.title {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Welcome line */
+.welcome-text {
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+/* Username line (small) */
+.welcome-name {
+  font-size: 14px;
+  margin-top: 2px;
+}
+
+/* Container */
+.container {
+  padding: 20px;
+  flex: 1;
+}
+
+/* Form Card */
+.form-card {
+  background: #14c9c9;
+  color: #003366;
+  padding: 25px;
+  width: 350px;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.form-card input {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+}
+
+/* Button */
+.btn {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(to right, #3b5bdc, #1c6cc4);
+  color: white;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* Catalog Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card button {
+  background: green;
+  color: white;
+  border: none;
+  padding: 8px;
+  margin-top: 10px;
+}
+
+/* Cart table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid gray;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+/* Gender radio group */
+.gender-group {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.gender-group label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}

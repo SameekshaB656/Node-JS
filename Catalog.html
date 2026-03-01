@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Catalog</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <h2>E-Book</h2>
+    <a href="Register.html">Registration</a>
+    <a href="Login.html">Login</a>
+    <a href="Catalog.html">Catalog</a>
+    <a href="Cart.html">Cart</a>
+    <a href="Logout.html">Logout</a>
+</div>
+
+<!-- Main Section -->
+<div class="main">
+
+    <!-- Header -->
+    <div class="header">
+        E-Book Management System
+    <div class="welcome-text">Welcome</div>
+    <div class="welcome-name">Sameeksha-24WH1A05C5</div>
+</div>
+
+    <!-- Catalog Content -->
+    <div class="container">
+
+        <h2>Available E-Books</h2>
+
+        <div class="grid">
+
+            <!-- Book 1 -->
+            <div class="card">
+                <img src="images/book1.jpg" alt="Java Book">
+                <h4>Java Programming</h4>
+                <p>$299</p>
+                <button onclick="addToCart('Java Programming',299)">Add to Cart</button>
+            </div>
+
+            <!-- Book 2 -->
+            <div class="card">
+                <img src="images/book2.jpg" alt="Python Book">
+                <h4>Python Basics</h4>
+                <p>$199</p>
+                <button onclick="addToCart('Python Basics',199)">Add to Cart</button>
+            </div>
+
+            <!-- Book 3 -->
+            <div class="card">
+                <img src="images/book3.jpg" alt="Web Dev Book">
+                <h4>Web Development</h4>
+                <p>$249</p>
+                <button onclick="addToCart('Web Development',249)">Add to Cart</button>
+            </div>
+
+        </div>
+
+        <!-- View Cart Button -->
+        <br><br>
+        <a href="Cart.html">
+            <button class="btn">View Cart</button>
+        </a>
+
+    </div>
+
+</div>
+
+<script src="Script.js"></script>
+
+
+</body>
+</html>
