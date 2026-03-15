@@ -41,7 +41,7 @@ body {
   flex-direction: column;
 }
 
-/* Header (single clean version) */
+/* Header */
 .header {
   background: #4CAF50;
   text-align: center;
@@ -61,7 +61,7 @@ body {
   margin-top: 5px;
 }
 
-/* Username line (small) */
+/* Username line */
 .welcome-name {
   font-size: 14px;
   margin-top: 2px;
@@ -154,4 +154,78 @@ th, td {
   display: flex;
   align-items: center;
   gap: 5px;
+}
+
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* Tablet Screens */
+@media (max-width: 900px) {
+
+  .sidebar {
+    width: 180px;
+  }
+
+  .form-card {
+    width: 300px;
+  }
+
+}
+
+
+/* Mobile Screens */
+@media (max-width: 768px) {
+
+  body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .sidebar h2 {
+    display: none;
+  }
+
+  .sidebar a {
+    font-size: 14px;
+    padding: 5px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-card {
+    width: 90%;
+  }
+
+}
+
+
+/* Very Small Screens */
+@media (max-width: 480px) {
+
+  .header {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .welcome-text {
+    font-size: 16px;
+  }
+
+  .welcome-name {
+    font-size: 12px;
+  }
+
+  table th, table td {
+    padding: 6px;
+    font-size: 12px;
+  }
+
 }

@@ -1,49 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Register - E-Ticketing</title>
+<title>Register</title>
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
-
 <body class="bg-light">
 
-<!-- Navbar -->
-<nav class="navbar navbar-dark bg-dark">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">E-Ticketing</a>
-  </div>
+<nav class="navbar navbar-dark bg-primary">
+<div class="container-fluid">
+<span class="navbar-brand">E-Ticketing System</span>
+<span class="text-white">SAMEEKSHA_24WH1A05C5</span>
+</div>
 </nav>
 
-<!-- Register Form -->
 <div class="container mt-5">
-  <div class="row justify-content-center">
-    <div class="col-md-6">
+<div class="row justify-content-center">
 
-      <div class="card shadow p-4">
-        <h3 class="text-center mb-4">Create Account</h3>
+<div class="col-md-4">
 
-        <input type="text" id="name" class="form-control mb-3" placeholder="Full Name">
+<div class="card p-4">
 
-        <input type="email" id="email" class="form-control mb-3" placeholder="Email Address">
+<h4 class="text-center">Register</h4>
 
-        <input type="password" id="password" class="form-control mb-3" placeholder="Password">
+<input class="form-control mt-2" id="name" placeholder="Full Name">
 
-        <button class="btn btn-success w-100" onclick="register()">Register</button>
+<input class="form-control mt-2" id="email" placeholder="Email">
 
-        <p class="text-center mt-3">
-          Already have account? <a href="login.html">Login</a>
-        </p>
+<input type="password" class="form-control mt-2" id="pass" placeholder="Password">
 
-      </div>
+<input type="password" class="form-control mt-2" id="confirmPass" placeholder="Confirm Password">
 
-    </div>
-  </div>
+<button class="btn btn-success mt-3" onclick="register()">Register</button>
+
+<p class="mt-3 text-center">
+Already registered? <a href="login.html">Login</a>
+</p>
+
+</div>
+
+</div>
+
+</div>
 </div>
 
 <script src="script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

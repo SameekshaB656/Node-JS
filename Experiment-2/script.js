@@ -1,109 +1,120 @@
-// REGISTER
-function register() {
+// Register
+function register(){
 
-    let name = document.getElementById("name").value;
-    let email = document.getElementById("email").value;
-    let password = document.getElementById("password").value;
+let name=document.getElementById("name").value
+let email=document.getElementById("email").value
+let pass=document.getElementById("pass").value
+let confirm=document.getElementById("confirmPass").value
 
-    if(name === "" || email === "" || password === ""){
-        alert("Please fill all fields");
-        return;
-    }
+if(pass!=confirm){
+alert("Passwords do not match")
+return
+}
 
-    let user = {
-        name: name,
-        email: email,
-        password: password
-    };
+let user={
+name:name,
+email:email,
+pass:pass
+}
 
-    localStorage.setItem("user", JSON.stringify(user));
+localStorage.setItem("user",JSON.stringify(user))
 
-    alert("Registered Successfully");
-    window.location = "login.html";
+alert("Registered Successfully")
+
+window.location="login.html"
+
 }
 
 
-// LOGIN
+// Login
 function login(){
 
-    let email = document.getElementById("loginEmail").value;
-    let password = document.getElementById("loginPassword").value;
+let email=document.getElementById("loginEmail").value
+let pass=document.getElementById("loginPass").value
 
-    let user = JSON.parse(localStorage.getItem("user"));
+let user=JSON.parse(localStorage.getItem("user"))
 
-    if(user && user.email === email && user.password === password){
-        alert("Login Successful");
-        window.location = "index.html";
-    } else {
-        alert("Invalid Credentials");
-    }
+if(user && user.email===email && user.pass===pass){
+
+alert("Login Successful")
+
+window.location="catalog.html"
+
+}else{
+
+alert("Invalid Credentials")
+
+}
+
 }
 
 
-// ADD TO CART
-function addToCart(eventName, price){
+// Add ticket to cart
+function addToCart(name,price){
 
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let cart=JSON.parse(localStorage.getItem("cart"))||[]
 
-    let existing = cart.find(item => item.eventName === eventName);
+cart.push({name:name,price:price})
 
-    if(existing){
-        existing.quantity += 1;
-    } else {
-        cart.push({
-            eventName: eventName,
-            price: price,
-            quantity: 1
-        });
-    }
+localStorage.setItem("cart",JSON.stringify(cart))
 
-    localStorage.setItem("cart", JSON.stringify(cart));
+alert("Ticket Added")
 
-    alert("Ticket Added");
 }
 
 
-// DISPLAY CART
+// Display cart
 function displayCart(){
 
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    let body = document.getElementById("cartBody");
+let cart=JSON.parse(localStorage.getItem("cart"))||[]
 
-    let totalAmount = 0;
-    body.innerHTML = "";
+let table=document.getElementById("cartTable")
 
-    cart.forEach((item, index) => {
+let total=0
 
-        let total = item.price * item.quantity;
-        totalAmount += total;
+cart.forEach((item,index)=>{
 
-        body.innerHTML += `
-            <tr>
-                <td>${item.eventName}</td>
-                <td>${item.quantity}</td>
-                <td>₹${item.price}</td>
-                <td>₹${total}</td>
-                <td>
-                    <button class="btn btn-danger btn-sm" onclick="removeItem(${index})">
-                        Remove
-                    </button>
-                </td>
-            </tr>
-        `;
-    });
+let row=`
+<tr>
+<td>${item.name}</td>
+<td>₹${item.price}</td>
+<td>
+<button class="btn btn-danger btn-sm"
+onclick="removeItem(${index})">
+Remove
+</button>
+</td>
+</tr>
+`
 
-    document.getElementById("grandTotal").innerText = "Total: ₹" + totalAmount;
+table.innerHTML+=row
+
+total+=item.price
+
+})
+
+document.getElementById("total").innerText="Total: ₹"+total
+
 }
 
 
-// REMOVE ITEM
+// Remove item
 function removeItem(index){
 
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let cart=JSON.parse(localStorage.getItem("cart"))
 
-    cart.splice(index,1);
+cart.splice(index,1)
 
-    localStorage.setItem("cart", JSON.stringify(cart));
+localStorage.setItem("cart",JSON.stringify(cart))
 
-    displayCart();
+location.reload()
+
+}
+
+
+// Logout
+function logoutUser(){
+
+localStorage.removeItem("cart")
+
 }
